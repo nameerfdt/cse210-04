@@ -72,4 +72,5 @@ class Cast:
             actor (Actor): The actor to remove.
         """
         if group in self._actors:
-            self._actors[group].remove(actor)
+            if actor in self._actors[group]:
+                self._actors[group].remove(actor)

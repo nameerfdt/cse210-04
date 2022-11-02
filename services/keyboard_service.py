@@ -34,13 +34,6 @@ class KeyboardService:
         
         if pyray.is_key_down(pyray.KEY_RIGHT):
             dx = 1
-        
-        #prevents key up movement
-        if pyray.is_key_down(pyray.KEY_UP):
-            dy = 0
-        #prevents key down movement
-        if pyray.is_key_down(pyray.KEY_DOWN):
-            dy = 0
 
         direction = Point(dx, dy)
         direction = direction.scale(self._cell_size)
